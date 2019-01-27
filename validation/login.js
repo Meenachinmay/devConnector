@@ -1,5 +1,3 @@
- // Defining the rules for the validation of register form
-// Creating the validation basically
 
 const Validator = require('validator')
 const isEmpty = require('./is-empty')

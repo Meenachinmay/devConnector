@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+// Load User Model
+const User = require('../../models/User')
 const gravatar = require('gravatar')
 const bcrpyt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
@@ -10,8 +12,8 @@ const passport = require('passport')
 const validateRegisterInput = require('../../validation/register')
 const validateLoginInput = require('../../validation/login')
 
-// Load User Model
-const User = require('../../models/User')
+
+
 
 // @route  GET api/users/test
 // @desc   Test users route
@@ -76,7 +78,7 @@ router.post('/login', (req, res) => {
     if (!isValid) {
         return res.status(400).json(errors)
     }
-
+    
     const email = req.body.email
     const password = req.body.password
 

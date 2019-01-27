@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const passport = require('passport')
+
 // these are the different routes
 const users = require('./routes/api/users')
 const posts = require('./routes/api/posts')
